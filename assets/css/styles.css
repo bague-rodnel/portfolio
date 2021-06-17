@@ -1,0 +1,198 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:wght@400;500;600&display=swap');
+
+:root {
+	--body-color:  #FFF;
+	--body-color-alt:  #FFFAF2;
+	--body-font:  'Libre Franklin', sans-serif;
+	--text-color:  #333;
+	--theme-color: #C66C49;
+  --theme-color-light: #F5D6AB;
+  --theme-color-dark: #8B4136;
+
+
+	/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --big-font-size: 1.3rem;
+  --h1-font-size: 1.5rem;
+  --h2-font-size: 1.25rem;
+  --h3-font-size: 1.125rem;
+  --normal-font-size: .938rem;
+  --small-font-size: .813rem;
+  --smaller-font-size: .75rem;
+
+  --font-normal:  400;
+  --font-medium:  500;
+  --font-semi-bold:  600;
+
+  --z-tooltip:  10;
+  --z-fixed:  100;
+  --z-modal:  1000;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-normal);
+  color: var(--text-color);
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+@media (min-width: 968px) {
+  :root {
+    --big-font-size: 3rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .975rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+.section {
+  padding: 2rem 0;
+}
+.section.odd {
+	background-color: var(--body-color);
+}
+
+.section.even {
+	background-color: var(--body-color-alt);
+}
+
+.section__title {
+	font-size: var(--h1-font-size);
+  color: var(--theme-color-dark);
+  font-weight: var(--font-semi-bold);
+}
+
+.section__subtitle {
+	display:  block;
+	font-size:  var(--small-font-size);
+  color: var(--theme-color);
+  font-weight: var(--font-medium);
+}
+
+.section__title,
+.section__subtitle {
+	text-align:  center;
+}
+
+
+/* ======================= navbar ============================================*/
+.navbar {
+  background-color: #333;
+}
+
+.navbar,
+.navbar a,
+.navbar .toggler__icon {
+  /* color: #fff; */
+  color: var(--theme-color-light);
+}
+
+.navbar .toggler__icon:hover,
+.navbar a:hover {
+  text-decoration: none;
+  color: var(--theme-color);
+}
+
+.navbar .brand,
+.navbar .toggler__icon {
+  font-size: var(--big-font-size);
+  font-weight: var(--font-medium);
+}
+
+.navbar-collapse {
+  padding: 1rem 0;
+}
+.navbar .nav__link {
+  margin: .312rem 0;
+}
+
+
+/* ======================= home / jumbotron ====================================*/
+.home {
+  padding: 0;
+}
+
+.home .jumbotron {
+  margin: 0;
+}
+
+/* ======================= about  ====================================*/
+.about__content img {
+  padding: 1rem;
+  min-width: 240px;
+  display: block;
+}
+
+/* ======================= projects ====================================*/
+.projects {
+
+}
+
+.projects__content {
+  padding: 2rem 0;
+}
+
+
+/* ======================= contact ====================================*/
+.contact .btn--submit {
+  background-color: var(--theme-color-dark);
+  color: #fff;
+}
+
+.contact .btn--submit:hover {
+  background-color: var(--theme-color);
+}
+
+/* ======================= footer ====================================*/
+.footer {
+  background-color: #333;
+}
+
+.footer .social__links {
+  color: var(--theme-color-light);
+}
+
+.footer .social__links:hover {
+  color: var(--theme-color);
+}
+
+
+// Extra small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px) { ... }
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) { ... }
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px) { ... }
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { ... }
