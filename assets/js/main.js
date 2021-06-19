@@ -1,3 +1,6 @@
+const aboutSectionTop = document.getElementById('about').getBoundingClientRect().top;
+const contactSectionTop = document.getElementById('contact').getBoundingClientRect().top;
+
 /*===== BACK TO TOP =====*/
 const backToTop = document.getElementById('btnBackToTop');
 
@@ -6,18 +9,30 @@ backToTop.addEventListener('click', () => {
   document.documentElement.scrollTop = 0;
 });
 
+
+/*====== TYPEWRITER =====*/
+const typewriter = document.getElementById('typewriter');
+
+
+
 // detect scrolling 
 window.onscroll = () => {
   let bodyTop = document.body.scrollTop;
   let docElementTop = document.documentElement.scrollTop;
-  let homeSection = document.getElementById('home');
   let topDistance = (bodyTop) ? bodyTop : docElementTop;
 
-  if (topDistance > (homeSection.scrollHeight)){
+  if (topDistance >= aboutSectionTop){
     backToTop.classList.add('button--show');
   }
   else if (topDistance <= 0) {
     backToTop.classList.remove('button--show');
+  }
+
+  if (topDistance >= contactSectionTop) {
+    typewriter.classList.add('run--animation');
+  }
+  else {
+    typewriter.classList.remove('run--animation');
   }
 };
 

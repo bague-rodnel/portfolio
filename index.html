@@ -37,31 +37,37 @@
     <button id="btnBackToTop"><i class="uil uil-arrow-up"></i></button>
     
     <main>
-      <div id="home" class="section home">
-
-
-        <div id="carouselExampleCaptions" class="carousel slide" data-ride="carousel">
-          <ol class="carousel-indicators">
-            <li data-target="#carouselExampleCaptions" data-slide-to="0" class="active"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="1"></li>
-            <li data-target="#carouselExampleCaptions" data-slide-to="2"></li>
+      <section id="home" class="section home">
+        <!-- . slide carousel-fade" data-ride="carousel" -->
+        <div id="homeCarousel" class="carousel" >
+          <ol class="carousel-indicators d-none d-sm-inline-flex">
+            <li data-target="#homeCarousel" data-slide-to="0" class="active"></li>
+            <li data-target="#homeCarousel" data-slide-to="1"></li>
+            <li data-target="#homeCarousel" data-slide-to="2"></li>
           </ol>
 
           <!-- content -->
           <div class="carousel-inner">
-            <div class="carousel-item active">
-              <div class="jumbotron d-flex align-items-center">
-                <div>
-                  <p>Hi, I'm</p>
-                  <h1 class="display-4">Rodnel</h1>
-                  <p class="lead">I'm not a robot. </p>
-                  <hr class="my-4">
-                  <p>Let's connect. We will work on your brand together.</p>
-                  <a class="nav__link btn" href="#projects" role="button">
-                    <i class="uil uil-folder-open"></i>
-                    My projects
-                  </a>
-              </div>
+            <div class="carousel-item active">  
+              <img src="assets/img/me/hero.jpg">
+              <!-- <img src="assets/img/me/hero-alt.jpg" alt=""> -->
+              <div class="carousel-caption caption--hero">
+                <div class="container">
+                  <div class="row d-flex align-items-start justify-content-center">
+                    <div class="col-6 col-md-5 col-lg-10">
+                      <p>Hi, I'm</p>
+                      <h1 class="jumbo--text">Rodnel</h1>
+                      <p>I'm not a robot. </p>
+                    </div>
+                    <div class="col-6 col-md-6 col-lg-10 text-right text-lg-left">
+                      <p>Let's connect. We will work on your brand together.</p>
+                      <a class="nav__link btn" href="#projects" role="button">
+                        <i class="uil uil-folder-open"></i>
+                        My projects
+                      </a>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
             <div class="carousel-item">
@@ -85,33 +91,38 @@
                 </a>
               </div>
             </div>
-          </div>
+          </div><!-- ./carousel-inner -->
 
-
-          <a class="carousel-control carousel-control-prev" href="#carouselExampleCaptions" role="button" data-slide="prev">
+          <a class="carousel-control carousel-control-prev" href="#homeCarousel" role="button" data-slide="prev">
             <span class="carousel-control-prev-icon" aria-hidden="true"></span>
             <span class="sr-only">Previous</span>
           </a>
-          <a class="carousel-control carousel-control-next" href="#carouselExampleCaptions" role="button" data-slide="next">
+          <a class="carousel-control carousel-control-next" href="#homeCarousel" role="button" data-slide="next">
             <span class="carousel-control-next-icon" aria-hidden="true"></span>
             <span class="sr-only">Next</span>
           </a>
         </div>
-      </div>
+      </section>
 
 
       <section id="about" class="section about">
         <div class="content__frame">
           <h2 class="section__title">About Me</h2>
-          <span class="section__subtitle">lorem ipsum dolor</span>
+          <span class="section__subtitle">get to know me</span>
 
           <div class="about__content container">
-            <div class="row d-flex align-items-center">
-              <div class="col-12 col-lg-6">
+            <div class="row d-flex align-items-center justify-content-center">
+              <div class="col-12 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center">
                 <img class="profile__pic rounded-circle" src="assets/img/me/me2.jpg" alt="">
               </div>
-              <div class="col-12 col-lg-6">
-                <p>I design beautiful brand-oriented websites. We will catch your visitors attention and keep them in your website.</p>
+              <div class="col-10 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center flex-column py-5">
+                <p class="text-center">
+                  <i class="uil uil-check about--icon"></i>
+                  I make clean and beautiful websites. We will position your brand where you need it.
+                </p>
+                <p class="text-center">
+                  <i class="uil uil-question about--icon"></i>
+                  Tell your visitors that you are always ready and accommodating without telling them directly: <em class="text--emphasis">fluid design.</em></p>
               </div>          
             </div>
           </div>
@@ -121,11 +132,11 @@
       <section id="skills" class="section skills">
         <div class="content__frame">
           <h2 class="section__title">Skills</h2>
-          <span class="section__subtitle">lorem ipsum dolor</span>
+          <span class="section__subtitle">why i'm fit</span>
 
           <div class="skills__content container">
             <div class="row d-flex justify-content-center align-items-center">
-              <div class="col-10 col-xl-8">
+              <div class="col-12 col-md-10 col-xl-8">
                 <!-- skills 1 -->
                 <div class="skills__container skills__open">
                   <div class="skills__header">
@@ -164,7 +175,7 @@
               </div> 
               <!-- ./col -->
 
-              <div class="col-10 col-xl-8">
+              <div class="col-12 col-md-10 col-xl-8">
                 <!-- skills 2 -->
                 <div class="skills__container skills__close">
                   <div class="skills__header">
@@ -196,14 +207,51 @@
         </div>
       </section>
 
+      
+      <section id="tools" class="tools">
+        <div class="jumbotron jumbotron-fluid">
+          <div class="container content__frame">
+            <div class="row d-flex justify-content-center">
+              <div class="col-12">
+                <h2 class="section__title">Tools</h2>
+                <span class="section__subtitle">peek into some of the tools I use to get the job done</span>
+              </div>
+
+
+              <div class="col-12 col-sm-10 col-md-8 col-xl-12 d-flex justify-content-center align-items-end flex-wrap">
+                <img class="tools-logo" src="assets/img/tools/logo-bootstrap.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-css3.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-expressjs.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-git.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-gitlab-ci-cd.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-heroku.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-html5.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-javascript.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-mongodb.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-nodejs.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-postman.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-react.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-rest.png" alt="">
+                <img class="tools-logo" src="assets/img/tools/logo-sublime-text-3.png" alt="">
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <div>
+        <!-- spacer -->
+      </div>
+
       <section id="projects" class="section projects">
         <div class="content__frame">
           <h2 class="section__title">Projects</h2>
-          <span class="section__subtitle">lorem ipsum chuchu</span>
+          <span class="section__subtitle">some of the big projects i took part in</span>
 
-          <div class="projects__content container">
+          <div class="projects__list container">
             <div class="row d-flex justify-content-center">
-              <div class="mb-4 col-10 col-md-8 col-lg-6 col-xl-3 order-1 order-xl-1">
+              <div class="mb-4 col-10 col-md-8 col-lg-6 col-xl-3 order-1 order-lg-1 order-xl-1">
                 <div class="card">
                   <img class="card-img-top rounded" src="assets/img/projects/enov.jpg" alt="...">
                   <div class="card-body">
@@ -223,7 +271,7 @@
                 </div>
               </div>
 
-              <div class="mb-4 col-10 col-md-8 col-lg-6 col-xl-3 order-2 order-xl-2">
+              <div class="mb-4 col-10 col-md-8 col-lg-6 col-xl-3 order-2 order-lg-2 order-xl-2">
                 <div class="card">
                   <img class="card-img-top rounded" src="assets/img/projects/sticky-fam.jpg" alt="...">
                   <div class="card-body">
@@ -242,7 +290,7 @@
                 </div>
               </div>
 
-              <div class="mb-4 col-10 col-md-8 col-lg-6 col-xl-3 order-4 order-xl-4">
+              <div class="mb-4 col-10 col-md-8 col-lg-6 col-xl-3 order-3 order-lg-4 order-xl-3">
                 <div class="card">
                   <img class="card-img-top rounded" src="assets/img/projects/birdwatch.jpg" alt="...">
                   <div class="card-body">
@@ -260,7 +308,7 @@
                 </div>
               </div>
 
-              <div class="mb-4 col-10 col-md-8 col-lg-6 col-xl-3 order-3 order-xl-3">
+              <div class="mb-4 col-10 col-md-8 col-lg-6 col-xl-3 order-4 order-lg-3 order-xl-4">
                 <div class="card">
                   <img class="card-img-top rounded" src="assets/img/projects/greenhouse.jpg" alt="...">
                   <div class="card-body">
@@ -286,45 +334,19 @@
       </section>
 
       
-      <div id="tools" class="tools">
-        <div class="content__frame">
-          <div class="jumbotron jumbotron-fluid">
-            <div class="container">
-              <div class="row">
-                <div class="col-12">
-                  <h2 class="section__title">Tools</h2>
-                  <span class="section__subtitle">A peek into some of the tools I use to get the job done.</span>
-                </div>
-                <div class="col-12 d-flex justify-content-center align-items-end flex-wrap">
-                  <img class="tools-logo" src="assets/img/tools/logo-bootstrap.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-css3.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-expressjs.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-git.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-gitlab-ci-cd.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-heroku.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-html5.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-javascript.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-mongodb.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-nodejs.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-postman.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-react.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-rest.png" alt="">
-                  <img class="tools-logo" src="assets/img/tools/logo-sublime-text-3.png" alt="">
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
         
       <section id="contact" class="section contact">
         <div class="content__frame">
           <h2 class="section__title">Contact</h2>
-          <span class="section__subtitle"><code>$(You).ready(() => { $(You).message(Me); });</code></span>
+          <div class="section__subtitle">
+            <div id="typewriter" class="typewriter d-inline-block">
+              <p id="typewriterText"><code>$(You).ready(() => { $(You).message(Me); });</code></p>
+            </div>
+          </div>
 
           <div class="contact__content container">
             <div class="row d-flex justify-content-center align-items-center">
-              <div class="col-12 col-lg-6">
+              <div class="col-12 col-sm-10 col-md-8 col-lg-6 col-xl-6 mb-5 mb-xl-0 xs--padded">
                 <form action="#">
                   <div class="form-group">
                     <label for="formName">Your name</label>
@@ -340,17 +362,27 @@
                   </div>
                   <div class="form-group">
                     <label for="formMessage">Your message</label>
-                    <textarea class="form-control" id="formMessage" rows="3" placeholder="hey, rod. i have a plan..."></textarea>
+                    <textarea class="form-control" id="formMessage" rows="6" placeholder="hey, rod. i have a plan..."></textarea>
                   </div>
-                  <button type="submit" class="btn btn--submit" >Send message</button>
+                  <button type="submit" class="btn btn--submit" >
+                    Send message
+                    <i class="uil uil-message"></i>
+                  </button>
                 </form>
               </div>
 
               <!-- FIX HEIGHT / WIDTH TO 100% -->
-              <div class="col-12 col-lg-6 h-100">
-                <div class="d-none d-lg-block d-flex align-items-center justify-content-center h-100">
-                  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d177569.79439217824!2d123.82332634487904!3d10.439406902520066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sph!4v1623924195708!5m2!1sen!2sph" width="570" height="400" style="border:0;" loading="lazy"></iframe>
+              <div class="d-none d-sm-block col-sm-12 col-xl-6 map-area">
+                <p class="text-right text-xl-left">...or maybe you're in the area...</p>
+                <div class="">
+                  <!--  width="570" height="400"  -->
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1645.750884894969!2d124.996103645671!3d11.167090622780607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x330877d482a2aaa3%3A0x10bacba641f02bd6!2sLe%20Cafe%20Cube!5e0!3m2!1sen!2sph!4v1624028618606!5m2!1sen!2sph" width="600" height="450" style="border:0;"></iframe>
                 </div>
+                
+                <p>
+                  <span class="contact__icon"><i class="uil uil-estate"></i></span>
+                  Cavite East, Palo, Leyte
+                </p>
               </div>
             </div>
           </div>
@@ -359,30 +391,24 @@
     </main>
     
     <footer class="footer">
-      <div class="container">
+      <div class="container content__frame">
         <div class="row text-center py-4 justify-content-center">
-          <div class="col-9 col-xl-4">
-            <a class="brand" href="mailto:bague.rodnel@gmail.com"><i class="uil uil-envelope pr-1"></i>bague.rodnel</a>
-            
-            <address>
-              <span class="d-block" href="#">bague.rodnel@gmail.com</span>
-              <span class="d-block" href="#">(+63) 919 123 1234</span>
-            </address>
+          <div class="col-10 col-sm-6 col-md-6 col-lg-4 col-xl-4">
 
             <ul class="social d-flex justify-content-around align-items-center">
               <li>
                 <a class="social__links" href="#about">
-                  <i class="fab fa-facebook"></i>
+                  <i class="uil uil-facebook"></i>
                 </a>
               </li>
               <li>
                 <a class="social__links" href="#about">
-                  <i class="fab fa-twitter"></i>
+                  <i class="uil uil-twitter"></i>
                 </a>
               </li>
               <li>
                 <a class="social__links" href="#about">
-                  <i class="fab fa-instagram"></i>
+                  <i class="uil uil-instagram"></i>
                 </a>
               </li>
               <li>
@@ -391,6 +417,22 @@
                 </a>
               </li>
             </ul>
+
+
+            <a class="brand" href="mailto:bague.rodnel@gmail.com">bague.rodnel</a>
+            
+            <address>
+              <a class="d-block" href="#">
+                <i class="uil uil-envelope pr-1"></i>
+                bague.rodnel@gmail.com
+              </a>
+              <a class="d-block" href="#">
+                <i class="uil uil-phone-alt"></i>
+                (+63) 919 123 1234
+              </a>
+            </address>
+
+            
           </div>
         </div>
       </div>
