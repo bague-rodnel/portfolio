@@ -566,9 +566,13 @@ iframe {
 @media (min-width: 1200px) { }
 
 /* ======================= tools / jumbo ====================================*/
-.tools .jumbotron {
-  /* background: linear-gradient(to bottom right, var(--theme-color-dark) 0%, var(--theme-color) 64%); */
+.tools {
+  
   background: linear-gradient(to bottom right, var(--container-color-alt2) -22%, var(--theme-color-light) 96%);
+}
+
+.tools .jumbotron {
+  background: none;
   margin-bottom: 0;
 }
 
@@ -610,7 +614,6 @@ iframe {
 }
 
 /*========================== projects ====================================*/
-
 
 .projects__list .card {
   border-style: none;
