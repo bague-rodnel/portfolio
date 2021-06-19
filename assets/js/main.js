@@ -1,6 +1,3 @@
-const aboutSectionTop = document.getElementById('about').getBoundingClientRect().top;
-const contactSectionTop = document.getElementById('contact').getBoundingClientRect().top;
-
 /*===== BACK TO TOP =====*/
 const backToTop = document.getElementById('btnBackToTop');
 
@@ -13,22 +10,35 @@ backToTop.addEventListener('click', () => {
 /*====== TYPEWRITER =====*/
 const typewriter = document.getElementById('typewriter');
 
+function isScrolledIntoView(elem, requireFull) {
+  let rect = elem.getBoundingClientRect();
+  let elemTop = rect.top;
+  let elemBottom = rect.bottom;
+  let elemHeight = rect.height;
+  let isVisible = false;
 
+  if (requireFull) {
+    // Only completely visible elements return true:
+    isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
+  }
+  else {
+    // Partially visible elements return true: (im accepting 66% of element)
+    isVisible = (elemTop < (window.innerHeight - (elemHeight*0.66)) && (elemBottom >= 0));
+  }
 
-// detect scrolling 
+  return isVisible;
+}
+
+// checks on scrolls
 window.onscroll = () => {
-  let bodyTop = document.body.scrollTop;
-  let docElementTop = document.documentElement.scrollTop;
-  let topDistance = (bodyTop) ? bodyTop : docElementTop;
-
-  if (topDistance >= aboutSectionTop){
+  if (isScrolledIntoView(document.getElementById('home'), true)) {
+    backToTop.classList.remove('button--show');
+  } else {
     backToTop.classList.add('button--show');
   }
-  else if (topDistance <= 0) {
-    backToTop.classList.remove('button--show');
-  }
 
-  if (topDistance >= contactSectionTop) {
+  if (isScrolledIntoView(document.getElementById('contact'), false)) {
+    typewriter.classList.remove("run--animation");
     typewriter.classList.add('run--animation');
   }
   else {
