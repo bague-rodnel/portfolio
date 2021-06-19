@@ -6,6 +6,7 @@
 	--container-color-alt:  #FFFAF2;
   --container-color-alt2: #FFECE4;
 	--text-color:  #333;
+  --shadow-dark: #333;
   --text-color-light: #EEE;
 	--theme-color: #C66C49;
   --theme-color-light: #F5D6AB;
@@ -22,6 +23,8 @@
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
   --h3-font-size: 1.125rem;
+  --h4-font-size: 1.080rem;
+  --h5-font-size: 1rem;
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
@@ -66,6 +69,34 @@
   --section-height: var(--xs-height);
 }
 
+@media (min-width: 992px) {
+  :root {
+    --big-font-size: 1.6rem;
+    --h1-font-size: 2.25rem;
+    --h2-font-size: 1.5rem;
+    --h3-font-size: 1.25rem;
+    --h4-font-size: 1.180rem;
+    --h5-font-size: 1.100rem;
+    --normal-font-size: 1rem;
+    --small-font-size: .975rem;
+    --smaller-font-size: .813rem;
+  }
+}
+
+@media (min-width: 1200px) { 
+  :root {
+    --big-font-size: 2rem;
+    --h1-font-size: 2.8125rem;
+    --h2-font-size: 1.875rem;
+    --h3-font-size: 1.5625rem;
+    --h4-font-size: 1.360rem;
+    --h5-font-size: 1.275rem;
+    --normal-font-size: 1.25rem;
+    --small-font-size: 1.21875rem;
+    --smaller-font-size: 1rem;
+  }
+}
+
 * {
 	padding: 0;
 	margin: 0;
@@ -83,6 +114,12 @@ body {
   color: var(--text-color);
   background-color: var(--container-color-alt2);
 }
+
+h1 { font-size: var(--h1-font-size);}
+h2 { font-size: var(--h2-font-size);}
+h3 { font-size: var(--h3-font-size);}
+h4 { font-size: var(--h4-font-size);}
+h5 { font-size: var(--h5-font-size);}
 
 ul {
     list-style: none;
@@ -145,12 +182,13 @@ iframe {
 .section__title {
 	font-size: var(--h1-font-size);
   color: var(--theme-color-dark);
-  font-weight: var(--font-semi-bold);
+  font-weight: var(--font-medium);
 }
 
 .section__subtitle {
 	display:  block;
 	font-size:  var(--normal-font-size);
+  font-weight: var(--font-medium);
   color: var(--theme-color);
   padding: 0 1.6rem;
   margin-bottom: 2rem;
@@ -178,17 +216,7 @@ iframe {
 
 @media (min-width: 768px) { }
 
-@media (min-width: 992px) {
-  :root {
-    --big-font-size: 1.6rem;
-    --h1-font-size: 2.25rem;
-    --h2-font-size: 1.5rem;
-    --h3-font-size: 1.25rem;
-    --normal-font-size: 1rem;
-    --small-font-size: .975rem;
-    --smaller-font-size: .813rem;
-  }
-}
+@media (min-width: 992px) { }
 
 @media (min-width: 1200px) { }
 
@@ -225,10 +253,6 @@ iframe {
   background-color: #222;
 }
 
-.navbar-toggler {
-  /* margin-right: 1rem; */
-}
-
 .navbar a,
 .navbar .toggler__icon {
   /* color: #fff; */
@@ -243,15 +267,12 @@ iframe {
 
 .navbar .brand {
   font-size: var(--big-font-size);
-  font-weight: var(--font-medium);
   padding: .25rem .75rem;
 }
 
 .navbar .nav__link {
   margin: .312rem 0;
 }
-
-
 
 @media (min-width: 576px) { }
 @media (min-width: 768px) { }
@@ -282,10 +303,25 @@ iframe {
   width: 100%;
 }
 
+.container--hero {
+  font-size: var(--font-normal);
+}
+
+.container--hero h1 {
+  /* font-size: var(--h1-font-size); */
+  font-weight: var(--font-semi-bold);
+  letter-spacing: 0.6666rem;
+  text-shadow: -0.12em 0.12em 0.2em var(--shadow-dark);
+}
+
 .caption--hero {
   width: 100%;
   height: 100%;
-  background-color: rgba(0,0,0,0.3);
+  background-color: rgba(0,0,0,0.36);
+  position: absolute;
+  top: 0;
+  left: 0;
+  text-align: left;
 }
 
 .caption--hero .container {
@@ -293,34 +329,70 @@ iframe {
   height: 100%;
   font-size: var(--small-font-size);
 }
-.caption--hero .nav__link {
-  font-size: var(--smaller-font-size);
-  color: var(--theme-color-light);
-  background-color: var(--theme-color-dark); 
-  border-radius: 0;
-}
-
 
 .caption--hero .btn--hero {
-  font-size: var(--small-font-size);
+  font-size: var(--smaller-font-size);
   color: var(--theme-color-light);
-  background-color: var(--theme-color-dark);
+  background-color: var(--theme-color); 
+  border-radius: 0;
+  text-shadow: 0 0.12em 0.12em var(--shadow-dark);
+  box-shadow: 0 0.12em 0.12em var(--shadow-dark);
+}
+
+.caption--hero .btn--hero:hover {
+  background-color: var(--theme-color-light);
+  color: var(--theme-color);
+  text-shadow: none;
+}
+
+.carousel .carousel-item {
+  position: relative;
+}
+
+.carousel .caption__link {
+  display: inline-block;
+  padding: 0 .5rem;
+  color: var(--theme-color-light);
+  text-shadow: 0.12em 0.12em 0.12em var(--shadow-dark);
+}
+
+.carousel .caption__link:hover {
+  color: var(--theme-color);
+}
+
+.caption--fluid {
+  position: absolute;
+  width: 100%;
+  bottom: 12%;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+
+  padding: 0.25em 1em;
+  text-align: center;
+}
+
+.caption--fluid p {
+  margin: 0;
+  display: block;
+}
+
+.caption--fluid .caption__button {
+  display: inline;
+  background-color: var(--theme-color);
+  padding: 0.5em 1em;
+  text-shadow: 0 0.12em 0.12em var(--shadow-dark);
+  box-shadow: 0 0.12em 0.12em var(--shadow-dark);
+}
+
+.caption--fluid .caption__button:hover {
+  background-color: var(--theme-color-light);
+  color: var(--theme-color);
+  text-shadow: none;
 }
 
 .carousel .carousel-control {
   visibility: hidden;
-}
-
-.home .carousel-caption {
-  /* background-color: rgba(0,0,0,0.3); */
-  position: absolute;
-  left: 0;
-  top: 0;
-  margin: 0 auto;
-  text-align: left;
-}
-.carousel .carousel-item {
-  /*  */
 }
 
 .carousel .carousel-item img {  
@@ -335,7 +407,7 @@ iframe {
     transform: translateY(-50%);
     font-size: var(--small-font-size);
   }
-  .caption--hero .nav__link {
+  .caption--hero .btn--hero {
     font-size: var(--small-font-size);
   }
 }
@@ -344,8 +416,10 @@ iframe {
     height: 50%;
     font-size: var(--normal-font-size);
   }
-  .caption--hero .nav__link {
-    font-size: var(--normal-font-size);
+
+  .caption--fluid {
+    padding: 1em 1.2em;
+    text-align: left;
   }
 }
 
@@ -353,9 +427,17 @@ iframe {
   .carousel .carousel-control {
     visibility: visible;
   }
+
+  .caption--fluid p{
+    margin-bottom: 1rem;
+  }
 }
 
-@media (min-width: 992px) {}
+@media (min-width: 992px) {
+  .caption--fluid {
+    padding: 1.2em 2.4em;
+  }
+}
 
 @media (min-width: 1200px) {
   .carousel .carousel-item {
@@ -418,12 +500,10 @@ iframe {
 
 .skills .skills__name {
   font-size: var(--small-font-size);
-  font-weight: var(--font-medium);
 }
 
 .skills .skills__number {
   font-size: var(--smaller-font-size);
-  font-weight: var(--font-normal);
   color: var(--theme-color);
 }
 
@@ -632,7 +712,7 @@ iframe {
 
 /* ======================= socket ====================================*/
 .socket {
-  border-top: 1px solid var(--theme-color-light);
+  border-top: 1px solid var(--theme-color);
   background-color: var(--text-color);
   color: var(--theme-color-light);
   font-size: var(--smaller-font-size);
