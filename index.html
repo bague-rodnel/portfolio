@@ -143,10 +143,7 @@
 
           <div class="about__content container">
             <div class="row d-flex align-items-center justify-content-center">
-              <div class="col-12 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center">
-                <img class="profile__pic rounded-circle" src="assets/img/me/me2.jpg" alt="my picture">
-              </div>
-              <div class="col-10 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center flex-column py-5">
+              <div class="col-10 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center flex-column">
                 <p class="text-center text-lg-left">
                   <i class="uil uil-check about--icon"></i>
                   I make clean and beautiful websites. We will position your brand where you need it.
@@ -154,7 +151,11 @@
                 <p class="text-center text-lg-left">
                   <i class="uil uil-question about--icon"></i>
                   Tell your visitors that you are always ready and accommodating without telling them directly: <em class="text--emphasis">flexible design.</em></p>
-              </div>          
+              </div>     
+              <div class="col-12 col-lg-6 col-xl-5 d-flex align-items-center justify-content-center">
+                <img class="profile__pic rounded-circle" src="assets/img/me/me2.jpg" alt="my picture">
+              </div>
+                   
             </div>
           </div>
         </div>
@@ -170,7 +171,7 @@
               <div class="col-12 col-md-10 col-xl-8">
                 <!-- skills 1 -->
                 <div class="skills__container skills__open">
-                  <div class="skills__header">
+                  <div class="skills__header pb-3 border-bottom">
                     <i class="uil uil-window-grid skills__icon"></i>
 
                     <div>
@@ -209,7 +210,7 @@
               <div class="col-12 col-md-10 col-xl-8">
                 <!-- skills 2 -->
                 <div class="skills__container skills__close">
-                  <div class="skills__header">
+                  <div class="skills__header pb-3 border-bottom">
                     <i class="uil uil-server-network-alt skills__icon"></i>
 
                     <div>
@@ -245,39 +246,111 @@
 
       
       <section id="tools" class="tools">
-        <div class="jumbotron jumbotron-fluid content__frame">
+        <div class="content__frame jumbo--pad">
           <div class="container">
             <div class="row d-flex justify-content-center">
               <div class="col-12">
                 <h2 class="section__title">Tools</h2>
-                <span class="section__subtitle">peek into some of the tools I use to get the job done</span>
+                <span class="section__subtitle">some of the tools I use to get the job done</span>
               </div>
 
               
               <div class="col-12 col-sm-10 col-md-8 col-xl-12 d-flex justify-content-center align-items-end flex-wrap">
-                <img class="tools-logo" src="assets/img/tools/logo-bootstrap.png" alt="" data-aos="slide-up" data-aos-easing="ease-in" data-aos-delay="900">
-                <img class="tools-logo" src="assets/img/tools/logo-css3.png" alt="" data-aos="slide-up" data-aos-easing="ease-out">
-                <img class="tools-logo" src="assets/img/tools/logo-expressjs.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-out" data-aos-delay="200">
-                <img class="tools-logo" src="assets/img/tools/logo-git.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-back">
-                <img class="tools-logo" src="assets/img/tools/logo-gitlab-ci-cd.png" alt="" data-aos="slide-up" data-aos-easing="ease-out-back" data-aos-delay="50">
-                <img class="tools-logo" src="assets/img/tools/logo-heroku.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-out-back">
-                <img class="tools-logo" src="assets/img/tools/logo-html5.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-sine">
-                <img class="tools-logo" src="assets/img/tools/logo-javascript.png" alt="" data-aos="slide-up" data-aos-easing="ease-out-sine" data-aos-delay="50">
-                <img class="tools-logo" src="assets/img/tools/logo-mongodb.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-out-sine" data-aos-delay="200">
-                <img class="tools-logo" src="assets/img/tools/logo-nodejs.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-quad" data-aos-delay="200">
-                <img class="tools-logo" src="assets/img/tools/logo-postman.png" alt="" data-aos="slide-up" data-aos-easing="ease-out-quad" data-aos-delay="50">
-                <img class="tools-logo" src="assets/img/tools/logo-react.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-out-quad">
-                <img class="tools-logo" src="assets/img/tools/logo-rest.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-cubic">
-                <img class="tools-logo" src="assets/img/tools/logo-sublime-text-3.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-quart" data-aos-delay="300">
+                <img class="tools__logo" src="assets/img/tools/logo-bootstrap.png" alt="" data-aos="slide-up" data-aos-easing="ease-in" data-aos-delay="900">
+                <img class="tools__logo" src="assets/img/tools/logo-css3.png" alt="" data-aos="slide-up" data-aos-easing="ease-out">
+                <img class="tools__logo" src="assets/img/tools/logo-expressjs.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-out" data-aos-delay="200">
+                <img class="tools__logo" src="assets/img/tools/logo-git.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-back">
+                <img class="tools__logo" src="assets/img/tools/logo-gitlab-ci-cd.png" alt="" data-aos="slide-up" data-aos-easing="ease-out-back" data-aos-delay="50">
+                <img class="tools__logo" src="assets/img/tools/logo-heroku.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-out-back">
+                <img class="tools__logo" src="assets/img/tools/logo-html5.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-sine">
+                <img class="tools__logo" src="assets/img/tools/logo-javascript.png" alt="" data-aos="slide-up" data-aos-easing="ease-out-sine" data-aos-delay="50">
+                <img class="tools__logo" src="assets/img/tools/logo-mongodb.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-out-sine" data-aos-delay="200">
+                <img class="tools__logo" src="assets/img/tools/logo-nodejs.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-quad" data-aos-delay="200">
+                <img class="tools__logo" src="assets/img/tools/logo-postman.png" alt="" data-aos="slide-up" data-aos-easing="ease-out-quad" data-aos-delay="50">
+                <img class="tools__logo" src="assets/img/tools/logo-react.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-out-quad">
+                <!-- <img class="tools__logo" src="assets/img/tools/logo-rest.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-cubic">
+                <img class="tools__logo" src="assets/img/tools/logo-sublime-text-3.png" alt="" data-aos="slide-up" data-aos-easing="ease-in-quart" data-aos-delay="300"> -->
               </div>
+
+              <div id="toolCaption" class="tool__caption col-12 p-5">
+                <p class="name"></p>
+                <p class="tool__class"></p>
+                <p class="info"></p>
+              </div>
+              <p id="toolsData" class="tools__data d-none">
+                [
+                  {
+                    "name":"Bootstrap",
+                    "classification":"frontend",
+                    "info":"quick prototyping"
+                  },
+                  {
+                    "name":"CSS3",
+                    "classification":"frontend",
+                    "info":"markup language for styling"
+                  },
+                  {
+                    "name":"Express JS",
+                    "classification":"backend",
+                    "info":"backend web app framework for nodejs"
+                  },
+                  {
+                    "name":"Git",
+                    "classification":"backend",
+                    "info":"version control system"
+                  },
+                  {
+                    "name":"GitLab",
+                    "classification":"backend",
+                    "info":"software deployment"
+                  },
+                  {
+                    "name":"Heroku",
+                    "classification":"backend",
+                    "info":"software deployment"
+                  },
+                  {
+                    "name":"HTML5",
+                    "classification":"frontend",
+                    "info":"latest html standard"
+                  },
+                  {
+                    "name":"JavaScript",
+                    "classification":"frontend",
+                    "info":"core language for page behavior"
+                  },
+                  {
+                    "name":"MongoDB",
+                    "classification":"backend",
+                    "info":"quick and lightweight database"
+                  },
+                  {
+                    "name":"Node.js",
+                    "classification":"backend",
+                    "info":"backend environment for JavaScript"
+                  },
+                  {
+                    "name":"Postman",
+                    "classification":"backend",
+                    "info":"API development"
+                  },
+                  {
+                    "name":"React",
+                    "classification":"frontend",
+                    "info":"JavaScript library for UI/UX"
+                  }
+                ]
+              </p>
+
             </div>
           </div>
         </div>
+
       </section>
 
 
       <div>
-        <!-- spacer -->
+        <!-- divine intervention -->
       </div>
 
       <section id="projects" class="section projects">
@@ -430,49 +503,51 @@
     
     
     <!-- footer -->
-    <footer class="footer content__frame">
-      <div class="container">
-        <div class="row text-center justify-content-center">
-          <div class="col-10 ml-auto mr-auto col-sm-6 col-md-6 col-lg-4 col-xl-4">
+    <footer class="footer">
+      <div class="content__frame">
+        <div class="container">
+          <div class="row text-center justify-content-center">
+            <div class="col-10 ml-auto mr-auto col-sm-6 col-md-6 col-lg-4 col-xl-4">
 
-            <ul class="social d-flex justify-content-around align-items-center">
-              <li>
-                <a class="social__links" href="#about">
-                  <i class="uil uil-facebook"></i>
-                </a>
-              </li>
-              <li>
-                <a class="social__links" href="#about">
-                  <i class="uil uil-twitter"></i>
-                </a>
-              </li>
-              <li>
-                <a class="social__links" href="#about">
-                  <i class="uil uil-instagram"></i>
-                </a>
-              </li>
-              <li>
-                <a class="social__links" href="#about">
-                  <i class="uil uil-linkedin"></i>
-                </a>
-              </li>
-            </ul>
+              <ul class="social d-flex justify-content-around align-items-center">
+                <li>
+                  <a class="social__links" href="#about">
+                    <i class="uil uil-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="social__links" href="#about">
+                    <i class="uil uil-twitter"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="social__links" href="#about">
+                    <i class="uil uil-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a class="social__links" href="#about">
+                    <i class="uil uil-linkedin"></i>
+                  </a>
+                </li>
+              </ul>
 
 
-            <a class="brand" href="mailto:bague.rodnel@gmail.com">bague.rodnel</a>
-            
-            <address>
-              <a class="d-block" href="#">
-                <i class="uil uil-envelope pr-1"></i>
-                bague.rodnel@gmail.com
-              </a>
-              <a class="d-block" href="#">
-                <i class="uil uil-phone-alt"></i>
-                (+63) 919 123 1234
-              </a>
-            </address>
+              <a class="brand" href="mailto:bague.rodnel@gmail.com">bague.rodnel</a>
+              
+              <address>
+                <a class="d-block" href="#">
+                  <i class="uil uil-envelope pr-1"></i>
+                  bague.rodnel@gmail.com
+                </a>
+                <a class="d-block" href="#">
+                  <i class="uil uil-phone-alt"></i>
+                  (+63) 919 123 1234
+                </a>
+              </address>
 
-            
+              
+            </div>
           </div>
         </div>
       </div>
@@ -500,6 +575,25 @@
     <script>
       $(document).ready(() => {
         $('[data-toggle="tooltip"]').tooltip();
+
+        var toolsData = JSON.parse(document.getElementById('toolsData').innerText);
+        $('.tools__logo').each((index, el) => {
+          $(el).hover(() => {
+            let toolFocus = toolsData[index];
+            $('#toolCaption').find(".name").html(toolFocus["name"]);
+            // $('#toolCaption').find(".tool__class").html(toolFocus["classification"]);
+            $('#toolCaption').find(".info").html(toolFocus["info"]);
+            if (toolFocus["classification"] == "frontend") {
+              $('#toolCaption').find(".tool__class").html('<i class="uil uil-window-grid skills__icon"></i>');
+            } else {
+              $('#toolCaption').find(".tool__class").html('<i class="uil uil-server-network-alt skills__icon"></i>');
+            }
+          }, () => {
+            $('#toolCaption').find(".name").html("");
+            $('#toolCaption').find(".tool__class").html("");
+            $('#toolCaption').find(".info").html("");
+          })
+        });
       });
     </script>
   </body>

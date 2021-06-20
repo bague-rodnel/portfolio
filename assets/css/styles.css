@@ -168,7 +168,7 @@ iframe {
 }
 
 .content__frame {
-  padding: 2.4rem 0 1.8rem;
+  padding: 3em 0 2em;
   margin: 0 auto;
 }
 
@@ -206,12 +206,7 @@ iframe {
       padding-right: 24px;
   }
 }
-@media (min-width: 576px) {
-  .content__frame {
-    padding-left: 0;
-    padding-right: 0;
-  }
-}
+@media (min-width: 576px) {}
 
 @media (min-width: 768px) { }
 
@@ -476,8 +471,9 @@ iframe {
 /* ======================= about  ====================================*/
 .about__content .profile__pic {
   min-width: 200px;
-  width: 320px;
+  width: 200px;
   display: block;
+  text-align: center;
 }
 
 .about--icon {
@@ -567,16 +563,20 @@ iframe {
 
 /* ======================= tools / jumbo ====================================*/
 .tools {
-  
   background: linear-gradient(to bottom right, var(--container-color-alt2) -22%, var(--theme-color-light) 96%);
+  position: relative;
 }
 
-.tools .jumbotron {
+.tools .content__frame {
   background: none;
-  margin-bottom: 0;
 }
 
-.tools .tools-logo {
+.jumbo--pad {
+  padding-top: 15em;
+  padding-bottom: 17em;
+}
+
+.tools .tools__logo {
   width: 56px;
   border-radius: .25rem;
   opacity: 0.9; 
@@ -589,7 +589,7 @@ iframe {
   -webkit-filter: sepia(100%);
 }
 
-.tools .tools-logo:hover {
+.tools .tools__logo:hover {
   filter: saturate(140%); 
   -webkit-filter: saturate(140%); 
   filter: contrast(110%); 
@@ -597,23 +597,42 @@ iframe {
   box-shadow: 1px 1px 3px 1px var(--theme-color-dark);
 }
 
+.tool__caption {
+  position: absolute;
+  text-align: center;
+  color: var(--text-color);
+  bottom: 0;
+}
+.tool__caption .name {
+  font-weight: var(--font-semi-bold);
+  color: var(--theme-color)
+}
 
+.tool__caption .info,
+.tool__caption .tool__class {
+  font-size: var(--smaller-font-size);
+}
+
+.tool__caption .tool__class {
+  font-style: italic;
+  margin-bottom: 0;
+}
 
 @media (min-width: 576px) { }
 @media (min-width: 768px) { }
 @media (min-width: 992px) { 
-  .tools .tools-logo {
+  .tools .tools__logo {
     width: 64px;
   }
 }
-@media (min-width: 1200px) {
-  .tools .content__frame {
-    padding-top: 4em;
-    padding-bottom: 4em;
-  }
-}
+@media (min-width: 1200px) { }
 
 /*========================== projects ====================================*/
+.section.projects {
+  /* background-image: url(../img/bg/coffee-cup.jpg); */
+  background-position: center;
+  background-attachment: fixed;
+}
 
 .projects__list .card {
   border-style: none;
