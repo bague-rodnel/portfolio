@@ -654,15 +654,16 @@ iframe {
 @media (min-width: 1200px) { }
 @media (min-width: 1600px) {
   .tools {
-    background-color: var(--theme-color);
     background-image: url('../img/bg/cofee-mug.png');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-size: cover;
+    background-position: center right;
   }
   .tools .bg__layover {  
     /* reduce opacity */
-    background: radial-gradient(circle, rgba(255,244,230,0.92) 16%, rgba(245,214,171,0.92) 71%, rgba(221,179,121,0.92) 100%);
+    background: radial-gradient(circle, rgba(255,244,230,0.90) 16%, rgba(245,214,171,0.90) 71%, rgba(221,179,121,0.90) 100%);
+    /* background: radial-gradient(circle, rgba(255,244,230,0.50) 16%, rgba(245,214,171,0.50) 71%, rgba(221,179,121,0.50) 100%); */
   }
 }
 /*========================== projects ====================================*/
@@ -736,14 +737,15 @@ background: linear-gradient(196deg, rgba(245,214,171,1) 9%, rgba(255,244,230,1) 
   margin-right: 0.33em;
 }
 
-/* 
+
 .typewriter p {
-  trigger only on -sm screensize above
+  color: var(--theme-color);
 } 
-*/
+
 
 /* 
 .typewriter.run--animation p {
+  trigger on -sm 
   visibility: visible;
   animation: 
     typing 2.4s steps(40, end),
@@ -782,7 +784,7 @@ background: linear-gradient(196deg, rgba(245,214,171,1) 9%, rgba(255,244,230,1) 
 @media (min-width: 576px) {
   .typewriter p {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid var(--theme-color); /* The typwriter cursor */
+    border-right: .2em solid var(--theme-color); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     letter-spacing: .15em;
