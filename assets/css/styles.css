@@ -685,6 +685,10 @@ iframe {
   margin-bottom: 1rem;;
 }
 
+.projects__list .card img {
+  border: 1px solid #ddd;
+}
+
 .projects__list .card-text  {
   padding-left: 0.25rem;
   padding-right: 0.25rem;
