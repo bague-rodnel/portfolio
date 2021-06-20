@@ -168,7 +168,7 @@ iframe {
 }
 
 .content__frame {
-  padding: 3em 0 2em;
+  padding: 3em 0 3em;
   margin: 0 auto;
 }
 
@@ -214,8 +214,8 @@ iframe {
 
 @media (min-width: 1200px) { 
   .content__frame {
-    padding-top: 3em;
-    padding-bottom: 3em;
+    padding-top: 5em;
+    padding-bottom: 6em;
   }
 }
 
@@ -471,7 +471,7 @@ iframe {
 /* ======================= about  ====================================*/
 .about__content .profile__pic {
   min-width: 200px;
-  width: 200px;
+  width: 15em;
   display: block;
   text-align: center;
 }
@@ -482,6 +482,7 @@ iframe {
 }
 .text--emphasis {
   color: var(--theme-color);
+  font-weight: var(--font-medium);
 }
 @media (min-width: 576px) { }
 @media (min-width: 768px) { }
@@ -614,7 +615,7 @@ iframe {
 }
 
 .tool__caption .tool__class {
-  font-style: italic;
+  /* font-style: italic; */
   margin-bottom: 0;
 }
 
@@ -647,11 +648,21 @@ iframe {
 .projects__list .card-title {
   color: var(--theme-color-dark);
   font-weight: var(--font-medium);
+  font-size: larger;
+  margin-top: 1rem;
+  margin-bottom: 1rem;;
 }
 
-.projects__list .card-title .contribution {
-  font-size: var(--normal-font-size);
-  margin-left: .5rem;
+.projects__list .card-text  {
+  padding-left: 0.25rem;
+  padding-right: 0.25rem;
+}
+
+.projects__list .card .contribution {
+  display: inline-block;
+  font-size: var(--smaller-font-size);
+  color: var(--theme-color-dark);
+  margin-left: 0.75em;
 }
 
 .projects__list .card-link {
@@ -678,6 +689,11 @@ iframe {
 
 .contact .btn--submit:hover {
   background-color: var(--theme-color);
+}
+
+.contact .label__header {
+  color: var(--theme-color-dark);
+  margin-right: 0.33em;
 }
 
 /* 
@@ -735,6 +751,7 @@ iframe {
 
 .footer address * {
   color: var(--text-color-light);
+  font-size: var(--small-font-size);
 }
 
 .footer .brand {

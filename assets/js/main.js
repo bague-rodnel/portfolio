@@ -1,3 +1,6 @@
+const toolsDataJSON = '{"bootstrap":{"name":"Bootstrap","classification":"frontend","info":"quick prototyping"},"css3":{"name":"CSS3","classification":"frontend","info":"markup language for styling"},"expressjs":{"name":"Express JS","classification":"backend","info":"backend web app framework for nodejs"},"git":{"name":"Git","classification":"backend","info":"version control system"},"gitlab":{"name":"GitLab","classification":"backend","info":"software deployment"},"heroku":{"name":"Heroku","classification":"backend","info":"software deployment"},"html5":{"name":"HTML5","classification":"frontend","info":"latest html standard"},"javascript":{"name":"JavaScript","classification":"frontend","info":"core language for page behavior"},"mongodb":{"name":"MongoDB","classification":"backend","info":"quick and lightweight database"},"nodejs":{"name":"Node.js","classification":"backend","info":"backend environment for JavaScript"},"postman":{"name":"Postman","classification":"backend","info":"API development"},"reactjs":{"name":"React","classification":"frontend","info":"JavaScript library for UI/UX"}}';
+const toolsDataObj = JSON.parse(toolsDataJSON);
+
 /*===== BACK TO TOP =====*/
 const backToTop = document.getElementById('btnBackToTop');
 
@@ -18,6 +21,7 @@ function isScrolledIntoView(elem, requireFull) {
   let isVisible = false;
 
   if (requireFull) {
+    // assumes that element height is shorter than screen height
     // Only completely visible elements return true:
     isVisible = (elemTop >= 0) && (elemBottom <= window.innerHeight);
   }
@@ -31,14 +35,14 @@ function isScrolledIntoView(elem, requireFull) {
 
 // checks on scrolls
 window.onscroll = () => {
-  if (isScrolledIntoView(document.getElementById('home'), true)) {
-    backToTop.classList.remove('button--show');
-  } else {
+  // if home is not visible ...
+  if ( !(isScrolledIntoView(document.getElementById('home'), false))) {
     backToTop.classList.add('button--show');
+  } else {
+    backToTop.classList.remove('button--show');
   }
 
   if (isScrolledIntoView(document.getElementById('contact'), false)) {
-    typewriter.classList.remove("run--animation");
     typewriter.classList.add('run--animation');
   }
   else {
