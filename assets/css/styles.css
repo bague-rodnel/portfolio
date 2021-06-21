@@ -698,10 +698,10 @@ main {
 }
 
 .tool__caption {
-  position: absolute;
+  /* position: absolute; */
   text-align: center;
   color: var(--text-color);
-  bottom: 0;
+  /* bottom: 0; */
 }
 .tool__caption .name {
   font-weight: var(--font-semi-bold);
