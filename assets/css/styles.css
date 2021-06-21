@@ -250,7 +250,8 @@ iframe {
   position: fixed;
   bottom: 1rem;
   right: 1.5rem;
-  z-index: var(--z-modal);
+  /* z-index: var(--z-modal); */
+  z-index: var(--z-fixed) ;
   font-size: var(--biggest-font-size);
   font-weight: var(--font-semi-bold);
   border: none;
@@ -278,7 +279,7 @@ iframe {
   background-color: rgba(0,0,0,0.8);
   position: absolute;
   width: 100%;
-  z-index: var(--z-modal);
+  z-index: var(--z-fixed);
 }
 
 .navbar a,
@@ -352,7 +353,7 @@ main {
 }
 
 .carousel-control {
-  z-index: var(--z-modal);
+  z-index: var(--z-tooltip);
 }
 
 .carousel-indicators {
@@ -740,6 +741,20 @@ main {
     /* background: radial-gradient(circle, rgba(255,244,230,0.50) 16%, rgba(245,214,171,0.50) 71%, rgba(221,179,121,0.50) 100%); */
 
   }
+}
+
+/*========================== modal  ====================================*/
+.modal-header {
+  display: block;
+}
+
+.modal-title {
+  color: var(--theme-color-dark);
+}
+
+.modal-footer .btn {
+  background-color: var(--theme-color-dark);
+  color: var(--theme-color-light);
 }
 /*========================== projects ====================================*/
 

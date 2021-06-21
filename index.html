@@ -289,6 +289,37 @@
         <!-- divine intervention -->
       </div>
 
+      <!-- Button trigger modal -->
+      <!-- <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#staticBackdrop">
+        Launch static backdrop modal
+      </button> -->
+
+      <!-- Modal -->
+      <div class="modal fade" id="staticBackdrop" data-backdrop="static" data-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div class="modal-image mb-3"></div>
+              <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+            </div>
+            
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-outline" data-dismiss="modal">Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ./modal -->
+
+      
+      <div>
+        <!-- divine intervention -->
+      </div>
+
+
       <section id="projects" class="section projects">
         <div class="content__frame">
           <h2 class="section__title">Projects</h2>
@@ -309,7 +340,7 @@
                       </span>
                     </p>
                     
-                    <a class="card-link">
+                    <a class="card-link" data-toggle="modal" data-target="#staticBackdrop" data-img="assets/img/projects/capstone1.jpg" data-title="Zuitt Capstone 1" data-text="My first capstone project for Zuitt's Coding Bootcamp. This showcases the frontend technologies that I learnt from Zuitt.">
                       Read more
                       <i class="uil uil-angle-double-right"></i>
                     </a>
@@ -330,7 +361,10 @@
                       </span>
                     </p>
                     
-                    <a class="card-link">
+                    <a class="card-link" data-toggle="modal" data-target="#staticBackdrop" 
+                      data-img="assets/img/projects/zuitt-light.png" 
+                      data-title="Zuitt Capstone 2" 
+                      data-text="Second capstone project for Zuitt's Coding Bootcamp. This is backend heavy. Ongoing...">
                       Read more
                       <i class="uil uil-angle-double-right"></i>
                     </a>
@@ -342,7 +376,7 @@
                 <div class="card" data-aos="fade-up" data-aos-easing="ease-out-sine" data-aos-delay="1000">
                   <img class="card-img-top rounded" src="assets/img/projects/zuitt-dark.png" alt="...">
                   <div class="card-body">
-                    <h5 class="card-title">Zuitt Capstone 3 </h5>
+                    <h5 class="card-title">Zuitt Capstone 3</h5>
 
                     <p class="card-text">The final installment in the trilogy of capstone projects with Zuitt's Coding Bootcamp. Upcoming...
 
@@ -352,7 +386,10 @@
                       </span>
                     </p>
                     
-                    <a class="card-link">
+                    <a class="card-link" data-toggle="modal" data-target="#staticBackdrop" 
+                    data-img="assets/img/projects/zuitt-dark.png" 
+                    data-title="Zuitt Capstone 3" 
+                    data-text="The final installment in the trilogy of capstone projects with Zuitt's Coding Bootcamp. Upcoming...">
                       Read more
                       <i class="uil uil-angle-double-right"></i>
                     </a>
@@ -372,7 +409,10 @@
                       </span>
                     </p>
 
-                    <a class="card-link">
+                    <a class="card-link" data-toggle="modal" data-target="#staticBackdrop" 
+                    data-img="assets/img/projects/sticky-fam.jpg" 
+                    data-title="Sticky Fam"
+                    data-text="A national community for Alzheimer's disease patients and their loved ones. We host very useful content for the disease and facilitate physical and virtual hangouts to connect everyone. ">
                       Read more
                       <i class="uil uil-angle-double-right"></i>
                     </a>
@@ -394,7 +434,10 @@
                       </span>
                     </p>
                     
-                    <a class="card-link">
+                    <a class="card-link" data-toggle="modal" data-target="#staticBackdrop" 
+                    data-img="assets/img/projects/enov.jpg" 
+                    data-title="Enov"
+                    data-text="Enov engineers the internet of things (IoT) in your home. Upgrade to an IoT home now.">
                       Read more
                       <i class="uil uil-angle-double-right"></i>
                     </a>
@@ -415,7 +458,10 @@
                       </span>
                     </p>
 
-                    <a class="card-link">
+                    <a class="card-link" data-toggle="modal" data-target="#staticBackdrop" 
+                    data-img="assets/img/projects/greenhouse.jpg" 
+                    data-title="Greenhouse"
+                    data-text="Greenhouse cultures plants that purifies the air in your room and some that are known to alleviate your asthma.">
                       Read more
                       <i class="uil uil-angle-double-right"></i>
                     </a>
@@ -436,7 +482,10 @@
                       </span>
                     </p>
 
-                    <a class="card-link">
+                    <a class="card-link" data-toggle="modal" data-target="#staticBackdrop" 
+                    data-img="assets/img/projects/birdwatch.jpg" 
+                    data-title="Birdwatch.org"
+                    data-text="Birdwatch is an international nonprofit which aims to protect endangered bird species all over the world.">
                       Read more
                       <i class="uil uil-angle-double-right"></i>
                     </a>
@@ -596,6 +645,12 @@
     <script>
       $(document).ready(() => {
         $('[data-toggle="tooltip"]').tooltip();
+
+        $('#staticBackdrop').on('show.bs.modal', function (event) {
+          $(this).find(".modal-image").html('<img src="'+ $(event.relatedTarget).data('img') + '" class="w-100 d-block">');
+          $(this).find(".modal-title").text($(event.relatedTarget).data('title'));
+          $(this).find(".modal-body").text($(event.relatedTarget).data('text'));
+        });
 
         $('.tools__logo').each((index, el) => {
           $(el).hover(() => {
