@@ -356,10 +356,11 @@ main {
 .carousel-control {
   position: absolute;
   width: 12%;
-  height: 15%;
+  height: 33%;
   top: 50%;
   transform: translateY(-50%);
   visibility: hidden;
+  z-index: var(--z-tooltip);
 }
 
 .carousel-indicators {
