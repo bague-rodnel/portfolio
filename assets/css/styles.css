@@ -732,7 +732,7 @@ main {
     background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center right;
+    background-position: center center;
   }
   .tools .bg__layover {  
     /* reduce opacity */
