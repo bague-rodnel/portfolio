@@ -274,7 +274,8 @@ iframe {
 
 /* ======================= navbar ============================================*/
 .navbar {
-  background-color: #222;
+  /* background-color: #222; */
+  background-color: rgba(0,0,0,0.8);
   position: absolute;
   width: 100%;
   z-index: var(--z-modal);
@@ -350,6 +351,17 @@ main {
   /* overflow:hidden; */
 }
 
+.carousel-control {
+  z-index: var(--z-modal);
+}
+
+.carousel-indicators {
+  /* bottom: unset;
+  top: 80vh;
+  transform: translateY(-50%); */
+  bottom: 5%;
+  transform: translateY(50%);
+}
 .caption--hero {
   width: 100%;
   height: 100%;
@@ -415,15 +427,21 @@ main {
 }
 
 .caption--fluid {
-  position: absolute;
+  background-color: rgba(0,0,0,0.66);
   width: 100%;
-  bottom: 12%;
+  height: max-content;
+  padding: 0.66em 1em;
+  text-align: center;
+
+  position: absolute;
+  /* bottom: 12%; */
   left: 0;
   right: 0;
-  background-color: rgba(0,0,0,0.5);
+  /* top: 66%; */
+  /* transform: translateY(-50%); */
+  bottom: 33%;
+  transform: translateY(50%);
 
-  padding: 0.25em 1em;
-  text-align: center;
 }
 
 .caption--fluid p {
@@ -446,6 +464,9 @@ main {
 }
 
 .carousel .carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   visibility: hidden;
 }
 
@@ -465,6 +486,9 @@ main {
   }
   .carousel .xs--hidden {
     display: inline;
+  }
+  .caption--fluid {
+    padding: 1.25em 2em;
   }
 }
 
@@ -490,18 +514,19 @@ main {
   }
 
   .caption--fluid {
-    padding: 1em 1.2em;
-    text-align: left;
+    /* padding: 1em 1.2em; */
+    text-align: right;
+    background-color: rgba(0,0,0,0.5);
+  }
+
+  .caption--fluid p {
+    margin-bottom: 1rem;
   }
 }
 
 @media (min-width: 768px) {
   .carousel .carousel-control {
     visibility: visible;
-  }
-
-  .caption--fluid p {
-    margin-bottom: 1rem;
   }
 }
 
@@ -527,19 +552,9 @@ main {
   }
 }
 
-@media (min-width: 1200px) {
+@media (min-width: 1200px) { }
 
-  .caption--fluid {
-    bottom: auto;
-    top: 36rem;
-  }
-}
-
-@media (min-width: 1600px) {
-  .caption--fluid {
-    text-align: center;
-  }
-}
+@media (min-width: 1600px) { }
 
 /* ======================= about  ====================================*/
 .about__content .profile__pic {
@@ -641,6 +656,7 @@ main {
   /* background: linear-gradient(to bottom right, var(--container-color-alt2) -22%, var(--theme-color-light) 96%); */
   background: rgb(255,244,230);
   background: linear-gradient(166deg, rgba(255,244,230,1) 18%, rgba(245,214,171,1) 69%, rgba(208,174,128,1) 100%);
+  
 }
 
 .tools .bg__layover {  
@@ -712,15 +728,17 @@ main {
 @media (min-width: 1200px) { }
 @media (min-width: 1600px) {
   .tools {
-    background-color: var(--theme-color);
     background-image: url('../img/bg/cofee-mug.png');
     background-attachment: fixed;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-size: cover;
+    background-position: center right;
   }
   .tools .bg__layover {  
     /* reduce opacity */
-    background: radial-gradient(circle, rgba(255,244,230,0.92) 16%, rgba(245,214,171,0.92) 71%, rgba(221,179,121,0.92) 100%);
+    background: radial-gradient(circle, rgba(255,244,230,0.90) 16%, rgba(245,214,171,0.90) 71%, rgba(221,179,121,0.90) 100%);
+    /* background: radial-gradient(circle, rgba(255,244,230,0.50) 16%, rgba(245,214,171,0.50) 71%, rgba(221,179,121,0.50) 100%); */
+
   }
 }
 /*========================== projects ====================================*/
