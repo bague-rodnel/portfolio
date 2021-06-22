@@ -650,14 +650,11 @@
       
       
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-      AOS.init({offset: 80, duration: 950});
-    </script>
-    
     <script src="assets/js/main.js"></script>
-
     <script>
       $(document).ready(() => {
+        
+        AOS.init({offset: 80, duration: 950});
         $('[data-toggle="tooltip"]').tooltip();
 
         $('#staticBackdrop').on('show.bs.modal', function (event) {

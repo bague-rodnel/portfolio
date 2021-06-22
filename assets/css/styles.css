@@ -610,6 +610,7 @@ main {
 
 .skills .skills__list {
   padding: 0 2rem 2rem;
+  transition: all ease-in-out 250ms;
 }
 
 .skills .skills__name {
