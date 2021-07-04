@@ -78,6 +78,9 @@
   --carousel-img-top: 0%;
   --carousel-img-maxh: 1600px;
   --carousel-img-max-w: 2400px;
+
+  --page-max-width: 1600px;
+  --page-max-height: 1066px;
 }
 
 @media (min-width: 992px) {
@@ -125,11 +128,12 @@ html {
 }
 
 body {
-  background-color: #FFF;
+  background-color: #333;
   position: relative;
   margin-left: auto;
   margin-right: auto;
   color: var(--text-color);
+  max-width: 1600px;
 }
 
 body * {
@@ -137,6 +141,7 @@ body * {
   font-size: var(--normal-font-size);
   font-weight: var(--font-normal);
 }
+
 
 h1 { font-size: var(--h1-font-size);}
 h2 { font-size: var(--h2-font-size);}
@@ -393,12 +398,20 @@ main {
 
 .caption--hero .container {
   position: relative;
-  font-size: var(--small-font-size);
-  /* font-size: var(--font-normal); */
+  width: 76%;
   top: 50%;
   transform: translateY(-50%);
+  
+  display: grid;
+  grid-template-columns: 66%;
+  
+  font-size: var(--small-font-size);
 }
 
+.caption--hero .grid {
+  display: grid;
+  gap: 1rem;
+}
 
 .caption--hero .container h1 {
   /* font-size: var(--hero-big-text); */
@@ -457,7 +470,6 @@ main {
 
 .caption--fluid {
   background-color: rgba(0,0,0,0.66);
-  width: 100%;
   height: max-content;
   padding: 0.66em 1em;
   text-align: center;
@@ -470,7 +482,12 @@ main {
   /* transform: translateY(-50%); */
   bottom: 33%;
   transform: translateY(50%);
+}
 
+.caption--fluid .content__wrapper {
+  width: 76%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .caption--fluid p {
@@ -578,7 +595,11 @@ main {
 
 @media (min-width: 1200px) { }
 
-@media (min-width: 1600px) { }
+@media (min-width: 1600px) {
+  :root {
+    --carousel-height: var(--page-max-height);
+  }
+ }
 
 /* ======================= about  ====================================*/
 .about__content .profile__pic {
