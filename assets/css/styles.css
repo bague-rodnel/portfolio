@@ -16,6 +16,7 @@
 	--body-font:  'Libre Franklin', sans-serif;
 
 	/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
+  --hero-big-text: 3rem;
   --biggest-font-size: 1.8rem;
   --bigger-font-size: 1.4rem;
   --big-font-size: 1.2rem;
@@ -81,6 +82,9 @@
 
 @media (min-width: 992px) {
   :root {
+    --hero-big-text: 4rem;
+    --biggest-font-size: 2.4rem;
+    --bigger-font-size: 1.866rem;
     --big-font-size: 1.6rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.5rem;
@@ -95,6 +99,9 @@
 
 @media (min-width: 1200px) { 
   :root {
+    --hero-big-text: 5rem;
+    --biggest-font-size: 3rem;
+    --bigger-font-size: 2.33rem;
     --big-font-size: 2rem;
     --h1-font-size: 2.8125rem;
     --h2-font-size: 1.875rem;
@@ -118,14 +125,17 @@ html {
 }
 
 body {
-	font-family: var(--body-font);
-  font-size: var(--normal-font-size);
-  font-weight: var(--font-normal);
-  color: var(--text-color);
   background-color: #FFF;
   position: relative;
   margin-left: auto;
   margin-right: auto;
+  color: var(--text-color);
+}
+
+body * {
+  font-family: var(--body-font);
+  font-size: var(--normal-font-size);
+  font-weight: var(--font-normal);
 }
 
 h1 { font-size: var(--h1-font-size);}
@@ -230,6 +240,7 @@ iframe {
   }
 }
 
+
 @media (min-width: 576px) {
 }
 
@@ -297,6 +308,7 @@ iframe {
 .navbar .brand {
   font-size: var(--big-font-size);
   padding: .25rem .75rem;
+  border: 0.25rem solid var(--theme-color-light);
 }
 
 .navbar .nav__link {
@@ -322,7 +334,6 @@ main {
   margin: 0;
   /* background: linear-gradient(to bottom left, var(--theme-color) 51%, var(--theme-color-dark) 100%); */
   background-color: var(--container-color);
-  color: var(--theme-color-light);
   
   position: relative;
 
@@ -390,24 +401,31 @@ main {
 
 
 .caption--hero .container h1 {
-  /* font-size: var(--h1-font-size); */
-  font-weight: var(--font-semi-bold);
+  /* font-size: var(--hero-big-text); */
+  font-size: var(--biggest-font-size);
+  /* font-weight: var(--font-semi-bold); */
   letter-spacing: 0.6666rem;
+  color: var(--theme-color-light);
   text-shadow: -0.12em 0.12em 0.2em var(--shadow-dark);
+}
+
+.caption--hero .subtitle {
+  font-size: var(--h2-font-size);
 }
 
 .caption--hero .btn--hero {
   position: relative;
   font-size: var(--smaller-font-size);
-  color: var(--theme-color-light);
   background-color: var(--theme-color); 
   border-radius: 0;
   text-shadow: 0 0.12em 0.12em var(--shadow-dark);
   box-shadow: 0 0.12em 0.12em var(--shadow-dark);
+  color: var(--theme-color-light);
   z-index: var(--z-button);
 }
-
+.caption--hero .btn--hero .uil:hover,
 .caption--hero .btn--hero:hover {
+  
   background-color: var(--theme-color-light);
   color: var(--theme-color);
   text-shadow: none;
@@ -416,6 +434,7 @@ main {
 .carousel {
   position:relative;
 }
+
 
 .carousel .carousel-item {
   /* overflow:hidden; */
