@@ -128,12 +128,17 @@ html {
 }
 
 body {
-  background-color: #333;
+  background-color: #999;
   position: relative;
+  color: var(--text-color);
   margin-left: auto;
   margin-right: auto;
-  color: var(--text-color);
   max-width: 1600px;
+}
+
+.page__wrapper {
+  /* tooltip placement solution */
+  position: relative;
 }
 
 body * {
@@ -267,6 +272,8 @@ iframe {
   position: fixed;
   bottom: 1rem;
   right: 1.5rem;
+  
+  transform: translateX(-50%);
   z-index: var(--z-fixed) ;
   background-color: rgba(139,65,54,0.5);
   border: none;
