@@ -938,6 +938,12 @@ background: linear-gradient(196deg, rgba(245,214,171,1) 9%, rgba(255,244,230,1) 
   color: var(--text-color);
 }
 
+.contact ::placeholder {
+  color: var(--theme-color);
+  font-family: var(--body-font);
+  font-style: italic;
+}
+
 .form-group {
   /* background-color: rgba(139, 65, 54, 0.2); */
   background-color: rgba(200, 120, 80, 0.2);
