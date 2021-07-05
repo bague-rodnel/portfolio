@@ -727,7 +727,7 @@ main {
 .tools .grid {
   width: 80%;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 64px 1fr;
   row-gap: 1.2rem;
 }
 
@@ -755,10 +755,9 @@ main {
 }
 
 .tool__caption {
-  /* position: absolute; */
+  visibility: hidden;
   text-align: center;
   color: var(--text-color);
-  /* bottom: 0; */
 }
 .tool__caption .name {
   font-weight: var(--font-semi-bold);

@@ -288,9 +288,9 @@
                 </div>
                 
                 <div id="toolCaption" class="tool__caption">
-                  <p class="name"></p>
-                  <p class="tool__class"></p>
-                  <p class="info"></p>
+                  <p class="name">Bootstrap</p>
+                  <p class="tool__class"><i class="uil uil-window-grid skills__icon"></i></p>
+                  <p class="info">quick prototyping</p>
                 </div>
               </div>
             </div>
@@ -546,7 +546,7 @@
       
                 <div>
                   <h3 class="contact__title">Call Me</h3>
-                  <span class="contact__subtitle">999-777-666</span>
+                  <span class="contact__subtitle">+63 9052596028</span>
                 </div>
               </div>
               
@@ -679,6 +679,7 @@
       
       
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script src="assets/js/visibility.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
       $(document).ready(() => {
@@ -693,20 +694,24 @@
         });
 
         $('.tools__logo').each((index, el) => {
+          let toolCaption = $('#toolCaption');
+          let captionName = toolCaption.find('.name');
+          let captionToolClass = toolCaption.find('.tool__class');
+          let captionInfo = toolCaption.find('.info');
+
           $(el).hover(() => {
             let toolFocus = toolsDataObj[$(el).attr("alt")];
-            $('#toolCaption').find(".name").html(toolFocus["name"]);
-            // $('#toolCaption').find(".tool__class").html(toolFocus["classification"]);
-            $('#toolCaption').find(".info").html(toolFocus["info"]);
+
+            toolCaption.visible();
+            captionName.html(toolFocus["name"]);
+            captionInfo.html(toolFocus["info"]);
             if (toolFocus["classification"] == "frontend") {
-              $('#toolCaption').find(".tool__class").html('<i class="uil uil-window-grid skills__icon"></i>');
+              captionToolClass.html('<i class="uil uil-window-grid skills__icon"></i>');
             } else {
-              $('#toolCaption').find(".tool__class").html('<i class="uil uil-server-network-alt skills__icon"></i>');
+              captionToolClass.html('<i class="uil uil-server-network-alt skills__icon"></i>');
             }
           }, () => {
-            $('#toolCaption').find(".name").html("");
-            $('#toolCaption').find(".tool__class").html("");
-            $('#toolCaption').find(".info").html("");
+            toolCaption.invisible();
           }); 
         });
 
