@@ -136,17 +136,20 @@ body {
   max-width: 1600px;
 }
 
-.page__wrapper {
-  /* tooltip placement solution */
-  position: relative;
-}
-
 body * {
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
   font-weight: var(--font-normal);
 }
 
+.page__wrapper {
+  /* tooltip placement solution */
+  position: relative;
+}
+/* 
+.absolute__anchor {
+  position: absolute;
+} */
 
 h1 { font-size: var(--h1-font-size);}
 h2 { font-size: var(--h2-font-size);}
@@ -272,8 +275,6 @@ iframe {
   position: fixed;
   bottom: 1rem;
   right: 1.5rem;
-  
-  transform: translateX(-50%);
   z-index: var(--z-fixed) ;
   background-color: rgba(139,65,54,0.5);
   border: none;
@@ -296,6 +297,14 @@ iframe {
 
 #btnBackToTop.button--show {
   display: block;
+}
+
+@media(min-width: 1600px) {
+  #btnBackToTop {
+    /* right: 1.5rem; */
+    left: 50%;
+    transform: translateX(800%);
+  }
 }
 
 /* ======================= navbar ============================================*/
