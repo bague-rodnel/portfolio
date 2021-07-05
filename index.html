@@ -686,7 +686,7 @@
       $(document).ready(() => {
         
         AOS.init({offset: 80, duration: 950});
-        $('[data-toggle="tooltip"]').tooltip({ container : '.page__wrapper'});
+        $('[data-toggle="tooltip"]').tooltip({ container : '.page__wrapper' });
 
         $('#staticBackdrop').on('show.bs.modal', function (event) {
           $(this).find(".modal-image").html('<img src="'+ $(event.relatedTarget).data('img') + '" class="w-100 d-block">');

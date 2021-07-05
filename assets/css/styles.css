@@ -1041,6 +1041,12 @@ background: linear-gradient(196deg, rgba(245,214,171,1) 9%, rgba(255,244,230,1) 
   color: var(--theme-color-light);
   margin-bottom: 1.5rem;
 }
+
+.footer__nav .nav__links:hover {
+  color: var(--theme-color);
+  text-decoration: none;
+}
+
 .footer .social__links {
   color: var(--theme-color-light);
   margin-right: 1.2rem;
