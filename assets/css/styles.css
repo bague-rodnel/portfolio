@@ -303,7 +303,7 @@ iframe {
   #btnBackToTop {
     /* right: 1.5rem; */
     left: 50%;
-    transform: translateX(800%);
+    transform: translateX(1080%);
   }
 }
 
