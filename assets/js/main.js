@@ -16,7 +16,7 @@ const typewriter = document.getElementById('typewriter');
 function isScrolledIntoView(elem, requireFull) {
   let rect = elem.getBoundingClientRect();
   let elemTop = rect.top;
-  let elemBottom = rect.bottom;
+  let elemBottom = rect.bottom;  // distance from the top of window
   let elemHeight = rect.height;
   let isVisible = false;
 
@@ -27,7 +27,10 @@ function isScrolledIntoView(elem, requireFull) {
   }
   else {
     // Partially visible elements return true: (im accepting 66% of element)
-    isVisible = (elemTop < (window.innerHeight - (elemHeight*0.66)) && (elemBottom >= 0));
+    // isVisible = (elemTop < (window.innerHeight - (elemHeight*0.66)) && (elemBottom >= 0));
+
+    // partially visible accepting any height visible
+    isVisible = (elemTop < (window.innerHeight) && (elemBottom >= 0));
   }
 
   return isVisible;
