@@ -5,15 +5,17 @@
   --container-color: #FFF;
 	--container-color-alt:  #FFFAF2;
   --container-color-alt2: #FFECE4;
-	--text-color:  #333;
   --shadow-dark: #333;
-  --text-color-light: #EEE;
+  /* --text-color: #414141; */
+  --text-color: #473E3E;
+  --text-color-white: #EEE;
+  --text-color-light: #666;
 	--theme-color: #C66C49;       /* rgb(198, 108, 73) */
   --theme-color-light: #F5D6AB; /* rgb(245, 214, 171) */
   --theme-color-dark: #8B4136;   /* rgb(139, 65, 54); */
 
     
-	--body-font:  'Libre Franklin', sans-serif;
+	--body-font:  'Poppins', sans-serif;
 
 	/* .5rem = 8px, 1rem = 16px, 1.5rem = 24px ... */
   --hero-big-text: 3rem;
@@ -142,20 +144,18 @@ body * {
   font-weight: var(--font-normal);
 }
 
-.page__wrapper {
-  /* tooltip placement solution */
-  position: relative;
-}
-/* 
-.absolute__anchor {
-  position: absolute;
-} */
+
 
 h1 { font-size: var(--h1-font-size);}
 h2 { font-size: var(--h2-font-size);}
 h3 { font-size: var(--h3-font-size);}
 h4 { font-size: var(--h4-font-size);}
 h5 { font-size: var(--h5-font-size);}
+
+h1, h2, h3, h4  {
+    font-family: inherit; /*chrome fix*/
+    font-weight: var(--font-semi-bold);
+}
 
 ul {
     list-style: none;
@@ -179,6 +179,12 @@ iframe {
   min-height: 400px;
   width: 100%;
   height: 100%;
+}
+
+
+.page__wrapper {
+  /* tooltip placement solution */
+  position: relative;
 }
 
 .xs--padded {
@@ -214,7 +220,6 @@ iframe {
 .section__title {
 	font-size: var(--h1-font-size);
   color: var(--theme-color-dark);
-  font-weight: var(--font-medium);
 }
 
 .section__subtitle {
@@ -287,7 +292,7 @@ iframe {
 #btnBackToTop i {
   font-size: var(--big-font-size);
   font-weight: var(--font-semi-bold);
-  color: var(--text-color-light);
+  color: var(--text-color-white);
 }
 
 #btnBackToTop:hover {
@@ -372,7 +377,7 @@ main {
 }
 
 .home a {
-  color: var(--text-color-light);
+  color: var(--text-color-white);
 }
 
 .carousel-item-next,
@@ -661,6 +666,7 @@ main {
 
 .skills .skills__title {
   font-size: var(--h3-font-size);
+  color: var(--theme-color-dark);
 }
 
 .skills .skills__subtitle {
@@ -675,6 +681,7 @@ main {
 
 .skills .skills__name {
   font-size: var(--small-font-size);
+  color: var(--text-color);
 }
 
 .skills .skills__number {
@@ -821,6 +828,7 @@ main {
 
 .modal-title {
   color: var(--theme-color-dark);
+  font-weight: var(--font-semi-bold);
 }
 
 .modal-footer .btn {
@@ -841,7 +849,7 @@ main {
 
 .projects__list .card-title {
   color: var(--theme-color-dark);
-  font-weight: var(--font-medium);
+  font-weight: var(--font-semi-bold);
   font-size: larger;
   margin-top: 1rem;
   margin-bottom: 1rem;;
@@ -898,19 +906,23 @@ background: linear-gradient(196deg, rgba(245,214,171,1) 9%, rgba(255,244,230,1) 
 }
 
 .contact__icon {
-  font-size: var(--bigger-font-size);
+  font-size: var(--biggest-font-size);
   color: var(--theme-color-dark);
   margin-right: 0.75rem;
 }
 
 .contact__title {
   font-size: var(--h3-font-size);
-  font-weight: var(--font-medium );
+  font-weight: var(--font-medium);
+  color: var(--theme-color-dark);
+  /* color: var(--text-color); */
 }
 
 .contact__subtitle {
   font-size: var(--small-font-size);
+  /* color: var(--theme-color); */
   color: var(--text-color);
+
 }
 
 .contact form {
@@ -935,7 +947,9 @@ background: linear-gradient(196deg, rgba(245,214,171,1) 9%, rgba(255,244,230,1) 
   border: none;
   outline: none;
   box-shadow: none;
+  /* color: var(--theme-color); */
   color: var(--text-color);
+  font-size: var(--normal-font-size);
 }
 
 .contact ::placeholder {
@@ -956,11 +970,12 @@ background: linear-gradient(196deg, rgba(245,214,171,1) 9%, rgba(255,244,230,1) 
 
 .form-group label {
   margin-bottom: 0;
+  font-size: var(--small-font-size);
 }
 
 .contact .btn--submit {
   background-color: var(--theme-color-dark);
-  color: var(--text-color-light);
+  color: var(--text-color-white);
   padding: 1em 1.2em;
   border-radius: 0.5rem;
   font-size: var(--normal-font-size);
@@ -1032,7 +1047,7 @@ background: linear-gradient(196deg, rgba(245,214,171,1) 9%, rgba(255,244,230,1) 
 .footer {
   position: relative;
   background-color: #333;
-  color: var(--text-color-light);
+  color: var(--text-color-white);
   font-size: var(--small-font-size);
 }
 
@@ -1041,14 +1056,8 @@ background: linear-gradient(196deg, rgba(245,214,171,1) 9%, rgba(255,244,230,1) 
   padding-left: 1.2rem;
 }
 
-.footer address * {
-  color: var(--text-color-light);
-  font-size: var(--small-font-size);
-}
-
 .footer .brand {
-  color: var(--text-color-light);
-  font-size: var(--big-font-size);
+  font-size: var(--bigger-font-size);
 }
 
 .footer__nav .nav__links {
@@ -1103,14 +1112,13 @@ background: linear-gradient(196deg, rgba(245,214,171,1) 9%, rgba(255,244,230,1) 
 /* ======================= socket ====================================*/
 .socket {
   border-top: 1px solid var(--theme-color);
-  background-color: var(--text-color);
+  background-color: var(--shadow-dark);
   padding: 1rem 0;
 }
 
 .socket * {
-  /* color: var(--theme-color-light); */
+  color: var(--text-color-light);
   /* color: rgba(245, 214, 171, 0.5); */
-  color: #777;
   font-size: var(--smaller-font-size);
 }
 
