@@ -4,11 +4,6 @@ const toolsDataObj = JSON.parse(toolsDataJSON);
 /*===== BACK TO TOP =====*/
 const backToTop = document.getElementById('btnBackToTop');
 
-backToTop.addEventListener('click', () => {
-  document.body.scrollTop = 0;
-  document.documentElement.scrollTop = 0;
-});
-
 
 /*====== TYPEWRITER =====*/
 const typewriter = document.getElementById('typewriter');
@@ -36,22 +31,6 @@ function isScrolledIntoView(elem, requireFull) {
   return isVisible;
 }
 
-// checks on scrolls
-window.onscroll = () => {
-  // if home is not visible ...
-  if ( !(isScrolledIntoView(document.getElementById('home'), false))) {
-    backToTop.classList.add('button--show');
-  } else {
-    backToTop.classList.remove('button--show');
-  }
-
-  if (isScrolledIntoView(document.getElementById('contact'), false)) {
-    typewriter.classList.add('run--animation');
-  }
-  else {
-    typewriter.classList.remove('run--animation');
-  }
-};
 
 /*===== MENU SHOW =====*/
 // bootstrap will handle this
@@ -83,6 +62,69 @@ function toggleSkills() {
   }
 }
 
-skillsHeader.forEach((el) => {
-  el.addEventListener('click', toggleSkills);
+
+
+$(document).ready(() => {
+  
+  AOS.init({offset: 80, duration: 950});
+
+
+  skillsHeader.forEach((el) => {
+    el.addEventListener('click', toggleSkills);
+  });
+
+  backToTop.addEventListener('click', () => {
+    document.body.scrollTop = 0;
+    document.documentElement.scrollTop = 0;
+  });
+
+  window.onscroll = () => {
+    // if home is not visible ...
+    if ( !(isScrolledIntoView(document.getElementById('home'), false))) {
+      backToTop.classList.add('button--show');
+    } else {
+      backToTop.classList.remove('button--show');
+    }
+
+    if (isScrolledIntoView(document.getElementById('contact'), false)) {
+      typewriter.classList.add('run--animation');
+    }
+    else {
+      typewriter.classList.remove('run--animation');
+    }
+  };
+
+  $('#staticBackdrop').on('show.bs.modal', function (event) {
+    $(this).find(".modal-image").html('<img src="'+ $(event.relatedTarget).data('img') + '" class="w-100 d-block">');
+    $(this).find(".modal-title").text($(event.relatedTarget).data('title'));
+    $(this).find(".modal-body").text($(event.relatedTarget).data('text'));
+  });
+
+  $('.tools__logo').each((index, el) => {
+    let toolCaption = $('#toolCaption');
+    let captionName = toolCaption.find('.name');
+    let captionToolClass = toolCaption.find('.tool__class');
+    let captionInfo = toolCaption.find('.info');
+
+    $(el).hover(() => {
+      let toolFocus = toolsDataObj[$(el).attr("alt")];
+
+      toolCaption.visible();
+      captionName.html(toolFocus["name"]);
+      captionInfo.html(toolFocus["info"]);
+      if (toolFocus["classification"] == "frontend") {
+        captionToolClass.html('<i class="uil uil-window-grid skills__icon"></i>');
+      } else {
+        captionToolClass.html('<i class="uil uil-server-network-alt skills__icon"></i>');
+      }
+    }, () => {
+      toolCaption.invisible();
+    }); 
+  });
+
+  $('#contactForm').click(() => {
+    typewriter.classList.add('run--animation');
+  })
+
+  $('[data-toggle="tooltip"]').tooltip({ container : '.page__wrapper' });
 });
