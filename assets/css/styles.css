@@ -131,6 +131,7 @@ html {
 
 body {
   background-color: #999;
+  background-color: #fff;
   position: relative;
   color: var(--text-color);
   margin-left: auto;
