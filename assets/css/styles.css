@@ -728,8 +728,8 @@ main {
 .tools {
   position: relative;
   /* background: linear-gradient(to bottom right, var(--container-color-alt2) -22%, var(--theme-color-light) 96%); */
-  background: rgb(255,244,230);
-  background: linear-gradient(166deg, rgba(255,244,230,1) 18%, rgba(245,214,171,1) 69%, rgba(208,174,128,1) 100%);
+  /* background: rgb(255,244,230);
+  background: linear-gradient(166deg, rgba(255,244,230,1) 18%, rgba(245,214,171,1) 69%, rgba(208,174,128,1) 100%); */
   
 }
 
