@@ -247,9 +247,9 @@ main {
   width: 100%;
   height: auto;
   -o-object-fit: cover;
-  object-fit: cover;
+     object-fit: cover;
   -o-object-position: center center;
-  object-position: center center;
+     object-position: center center;
 }
 
 .carousel .slide1 {
@@ -567,12 +567,7 @@ main {
 
   .tools .bg__layover {
     /* reduce opacity */
-    background: radial-gradient(
-      circle,
-      rgba(255, 244, 230, 0.9) 16%,
-      rgba(245, 214, 171, 0.9) 71%,
-      rgba(221, 179, 121, 0.9) 100%
-    );
+    background: radial-gradient(circle, rgba(255, 244, 230, 0.9) 16%, rgba(245, 214, 171, 0.9) 71%, rgba(221, 179, 121, 0.9) 100%);
     /* background: radial-gradient(circle, rgba(255,244,230,0.50) 16%, rgba(245,214,171,0.50) 71%, rgba(221,179,121,0.50) 100%); */
   }
 }
@@ -776,8 +771,7 @@ main {
 }
 /* The typewriter cursor effect */
 @-webkit-keyframes blink-caret {
-  from,
-  to {
+  from, to {
     border-color: transparent;
   }
   50% {
@@ -785,8 +779,7 @@ main {
   }
 }
 @keyframes blink-caret {
-  from,
-  to {
+  from, to {
     border-color: transparent;
   }
   50% {
@@ -809,9 +802,8 @@ main {
 
   .typewriter.run--animation p {
     visibility: visible;
-    -webkit-animation: typing 2.4s steps(40, end),
-      blink-caret 0.75s step-end infinite;
-    animation: typing 2.4s steps(40, end), blink-caret 0.75s step-end infinite;
+    -webkit-animation: typing 2.4s steps(40, end), blink-caret 0.75s step-end infinite;
+            animation: typing 2.4s steps(40, end), blink-caret 0.75s step-end infinite;
   }
 }
 @media (min-width: 768px) {
@@ -902,4 +894,4 @@ main {
   .content__frame {
     max-width: 100ch;
   }
-} /*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
