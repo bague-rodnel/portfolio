@@ -253,19 +253,19 @@ main {
 }
 
 .carousel .slide1 {
-  background: url("assets/img/me/hero.jpg");
+  background: url("../img/me/hero.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .carousel .slide2 {
-  background: url("assets/img/bg/mobile-first.jpg");
+  background: url("../img/bg/mobile-first.jpg");
   background-position: center center;
   background-size: cover;
 }
 
 .carousel .slide3 {
-  background: url("assets/img/bg/flexible-design.jpg");
+  background: url("../img/bg/flexible-design.jpg");
   background-position: center center;
   background-size: cover;
 }
